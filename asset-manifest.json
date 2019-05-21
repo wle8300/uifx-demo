@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/uifx-demo/static/css/main.34de6062.chunk.css",
+    "main.js": "/uifx-demo/static/js/main.3c295c27.chunk.js",
+    "main.js.map": "/uifx-demo/static/js/main.3c295c27.chunk.js.map",
+    "runtime~main.js": "/uifx-demo/static/js/runtime~main.04759a03.js",
+    "runtime~main.js.map": "/uifx-demo/static/js/runtime~main.04759a03.js.map",
+    "static/js/2.682964ec.chunk.js": "/uifx-demo/static/js/2.682964ec.chunk.js",
+    "static/js/2.682964ec.chunk.js.map": "/uifx-demo/static/js/2.682964ec.chunk.js.map",
+    "index.html": "/uifx-demo/index.html",
+    "precache-manifest.c669d186a6b933f721c5839330150aa4.js": "/uifx-demo/precache-manifest.c669d186a6b933f721c5839330150aa4.js",
+    "service-worker.js": "/uifx-demo/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/uifx-demo/static/css/main.34de6062.chunk.css.map",
+    "static/media/beep.mp3": "/uifx-demo/static/media/beep.6df49e4b.mp3",
+    "static/media/tick.mp3": "/uifx-demo/static/media/tick.eb69c905.mp3"
+  }
+}
