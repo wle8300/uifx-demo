@@ -36,7 +36,8 @@ yarn add uifx
           </code>
         </div>
         <A />
-        <B />
+
+
         <div style={{ padding: 16 }}>
           <h2>Changing volume</h2>
           <code>
@@ -51,20 +52,18 @@ const tick = new UIfx({
   throttleMs: 50
 })
 
-tick.play() //plays at 0.1 volume
-tick.play(0.5) //plays at 0.5 volume
-tick.play() //plays at 0.5 volume
+//change volume (non-persistent)
+tick.play(0.5)                // plays 0.5 volume
+tick.play()                   // reverts back to 0.1 volume
 
-// Using "UIfx.setVolume()"
-tick.setVolume(0.24).play() //plays at 0.24 volume
-
-// chainable
-tick.setVolume(0.15)
-tick.play() //plays at 0.15 volume
-
+//change volume (persistent)
+tick.setVolume(0.2).play()    // plays 0.2 volume
+tick.play()                   // plays 0.2 volume
 `}</pre>
           </code>
         </div>
+        <B />
+
         {/* <D /> */}
         {/* <B /> */}
       </div>
