@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 import UIfx from "uifx";
+import bellAudio from './audio-assets/beep.mp3'
 
-const beep = new UIfx({
-  asset: require('./audio-assets/beep.mp3')
-});
+const beep = new UIfx(bellAudio);
+
 
 export default class App extends Component {
   state = {
@@ -13,16 +13,26 @@ export default class App extends Component {
   render() {
     return (
       <div style={{ padding: 16 }}>
-        <h2>Create new UIfx</h2>
+        <h2>Basic</h2>
         <code>
           <pre
             style={{ padding: 16, background: "white" }}
           >{`import UIfx from './uifx'
 import beepMp3 from './my-sounds/beep.mp3'
 
-const beep = new UIfx({asset: beepMp3})
+const beep = new UIfx(beepMp3)
 
-beep.play()`}</pre>
+
+
+/**************
+ * using uifx *
+ **************/
+
+// Vanilla JS
+<button onclick="beep.play()">Signup</button>
+
+// React.js
+<button onClick={beep.play}>Signup</button>`}</pre>
         </code>
         <div>Pressed {this.state.count} times</div>
         <button
