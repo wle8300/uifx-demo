@@ -1,10 +1,16 @@
 import React, { Component } from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 import A from "./A";
 import B from './B'
 
 export default class App extends Component {
   render() {
+
+    const code = `npm install --save uifx`
+    
     return (
       <div>
         <div>
@@ -28,16 +34,9 @@ export default class App extends Component {
         </div>
         <div style={{ marginTop: 30, padding: 16 }}>
           <h2>Installation</h2>
-          <code>
-            <pre
-              style={{ padding: 16, background: "white" }}
-            >{`npm install --save uifx
-
-// or
-
-yarn add uifx
-`}</pre>
-          </code>
+          <SyntaxHighlighter language="shell" style={okaidia} customStyle={{padding: 20}}>
+            {code}
+          </SyntaxHighlighter>
         </div>
         
         <A />

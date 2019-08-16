@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 import UIfx from "uifx";
 import tickAudio from './audio-assets/tick.mp3';
@@ -17,13 +20,8 @@ export default class App extends Component {
   };
 
   render() {
-    return (
-      <div style={{ margin: 16 }}>
-        <h2>Advanced</h2>
-        <code>
-          <pre
-            style={{ padding: 16, background: "white" }}
-          >{`import UIfx from './uifx'
+
+    const code = `import UIfx from './uifx'
 import tickMp3 from './my-sounds/beep.mp3'
 
 const tick = new UIfx(
@@ -53,8 +51,14 @@ tick.play()                      // plays 0.2 volume
 
 // Example in ReactJS
 <input onChange={tick.play} type="range"/>
-`}</pre>
-        </code>
+`
+
+    return (
+      <div style={{ margin: '16px 16px 100px' }}>
+        <h2>Advanced</h2>
+        <SyntaxHighlighter language="javascript" style={okaidia} customStyle={{padding: 20}}>
+          {code}
+        </SyntaxHighlighter>
         <div>{this.state.value}</div>
         <input
           value={this.state.value}
