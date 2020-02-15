@@ -4,7 +4,7 @@ import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 import A from "./A";
-import B from './B'
+import B from './B';
 
 export default class App extends Component {
   render() {
